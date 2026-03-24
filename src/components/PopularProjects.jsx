@@ -47,7 +47,7 @@ const PopularProjects = () => {
   return (
     <section className={styles.popularProjects} ref={ref}>
       <div className={`container ${styles.popularProjectsContainer}`}>
-        <h2 className={styles.sectionTitle}>Our Trending Projects 🔥</h2>
+        <h2 className={styles.sectionTitle}>Our Trending Projects</h2>
         
         <div className={styles.projectsGrid}>
           {projects.map((project, index) => (

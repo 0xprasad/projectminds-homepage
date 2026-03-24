@@ -41,7 +41,7 @@ const Categories = () => {
   return (
     <section className={styles.categories} ref={ref}>
       <div className={`container ${styles.categoriesContainer}`}>
-        <h2 className={styles.sectionTitle}>Explore Projects by Domain 🔍</h2>
+        <h2 className={styles.sectionTitle}>Explore Projects by Domain</h2>
         
         <div className={styles.categoriesGrid}>
           {categories.map((category, index) => (
@@ -53,7 +53,7 @@ const Categories = () => {
               <div className={styles.categoryIcon}>{category.icon}</div>
               <h3 className={styles.categoryTitle}>{category.title}</h3>
               <p className={styles.categoryDescription}>{category.description}</p>
-              <p className={styles.categorySubtext}>Ready-to-demo projects — fully documented and affordable.</p>
+              <p className={styles.categorySubtext}>Reference implementations / guided systems — fully documented and affordable.</p>
               <a href="/projects" className={styles.categoryBtn}>View Projects →</a>
             </div>
           ))}

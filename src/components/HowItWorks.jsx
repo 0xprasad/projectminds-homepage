@@ -31,7 +31,7 @@ const HowItWorks = () => {
   return (
     <section className={styles.howItWorks} ref={ref}>
       <div className={`container ${styles.howItWorksContainer}`}>
-        <h2 className={styles.sectionTitle}>How We Build Your Project in 4 Simple Steps 🚀</h2>
+        <h2 className={styles.sectionTitle}>How We Build Your Project in 4 Simple Steps</h2>
         
         <div className={styles.timeline}>
           {steps.map((step, index) => (

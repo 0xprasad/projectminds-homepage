@@ -21,10 +21,10 @@ const HeroSection = () => {
       <div className={`container ${styles.heroContainer}`}>
         <div className={`${styles.heroContent} ${inView ? styles.visible : ''}`}>
           <h1 className={styles.headline}>
-            Final Year Projects Made Easy 🚀
+            Build Real-World Projects That Actually Matter
           </h1>
           <p className={styles.subheadline}>
-            Affordable, ready-to-submit projects with Code, Report, and PPT!
+            We help students go beyond theory and work on practical, industry-relevant systems with proper guidance.
           </p>
           
           <div className={styles.ctaButtons}>

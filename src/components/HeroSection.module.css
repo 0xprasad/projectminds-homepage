@@ -18,6 +18,7 @@
   background: radial-gradient(circle, rgba(255, 214, 10, 0.15) 0%, transparent 70%);
   border-radius: 50%;
   z-index: 0;
+  animation: slowPulseMove 15s ease-in-out infinite;
 }
 
 .heroContainer {
@@ -31,7 +32,7 @@
   text-align: center;
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .heroContent.visible {
@@ -84,8 +85,8 @@
 }
 
 .btnPrimary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(255, 214, 10, 0.6);
+  transform: translateY(-4px);
+  box-shadow: 0 0 24px rgba(255, 214, 10, 0.6);
   background: #FFC700;
 }
 
@@ -93,13 +94,30 @@
   background: transparent;
   color: var(--primary-black);
   border: 2px solid var(--primary-black);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btnSecondary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 0; height: 100%;
+  background: var(--primary-black);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: -1;
+}
+
+.btnSecondary:hover::before {
+  width: 100%;
 }
 
 .btnSecondary:hover {
-  background: var(--primary-black);
+  background: transparent;
   color: var(--white);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-black);
 }
 
 @media (max-width: 768px) {

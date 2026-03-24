@@ -7,31 +7,37 @@ const WhyChoose = () => {
 
   const features = [
     {
-      icon: '✅',
-      title: 'Complete Package',
-      description: 'Code, Report, PPT — all included.'
+      icon: '🛠️',
+      title: 'Guided Project Development',
+      description: 'End-to-end support to help you build your project from idea to deployment.'
     },
     {
-      icon: '⚙️',
-      title: 'Customizable Projects',
-      description: 'Tailored for your syllabus and department.'
+      icon: '💻',
+      title: 'Domain-Based Projects',
+      description: 'AI, ML, IoT, Web — aligned with real-world applications.'
     },
     {
-      icon: '⏱️',
-      title: 'Fast Delivery',
-      description: 'Ready within 1 week.'
+      icon: '📄',
+      title: 'Documentation & Presentation Support',
+      description: 'Helping you explain what you build confidently.'
     },
     {
-      icon: '💬',
-      title: 'Support Till Viva',
-      description: 'We guide you till your presentation day.'
+      icon: '🎓',
+      title: 'Research & Publication Support',
+      description: 'We guide students and faculty through the process of turning ideas into structured research papers — from problem selection to final submission in journals and conferences.',
+      bullets: [
+        'Topic identification and research direction',
+        'Paper structuring and documentation guidance',
+        'Support for IEEE / conference submissions',
+        'Review and refinement assistance'
+      ]
     }
   ];
 
   return (
     <section className={styles.whyChoose} ref={ref}>
       <div className={`container ${styles.whyChooseContainer}`}>
-        <h2 className={styles.sectionTitle}>Why Students Trust ProjectMinds 💡</h2>
+        <h2 className={styles.sectionTitle}>Project Mentorship Services</h2>
         
         <div className={styles.featuresGrid}>
           {features.map((feature, index) => (
@@ -45,6 +51,13 @@ const WhyChoose = () => {
               </div>
               <h3 className={styles.featureTitle}>{feature.title}</h3>
               <p className={styles.featureDescription}>{feature.description}</p>
+              {feature.bullets && (
+                <ul className={styles.featureBullets}>
+                  {feature.bullets.map((bullet, i) => (
+                    <li key={i}>{bullet}</li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>

@@ -101,9 +101,9 @@ const ProjectsPage = () => {
       
       <section className={styles.hero}>
         <div className="container">
-          <h1 className={styles.heroTitle}>Explore Our Projects 🚀</h1>
+          <h1 className={styles.heroTitle}>Explore Our Projects</h1>
           <p className={styles.heroSubtitle}>
-            Choose from 100+ ready-to-submit final year projects with complete documentation
+            Choose from 100+ reference implementations / guided systems with complete documentation
           </p>
         </div>
       </section>
